@@ -7,11 +7,19 @@
 //
 
 #import "BDDAppDelegate.h"
+#import "BDDViewController.h"
 
 @implementation BDDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    BDDViewController *vc = [[BDDViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = nvc;
+    
+    NSLog(@"AppDelegate");
     // Override point for customization after application launch.
     return YES;
 }

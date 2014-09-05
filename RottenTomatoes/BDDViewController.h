@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BDDViewController : UIViewController
+@interface BDDViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property UITableView *mainTableView;
+@property NSArray *results;
+@property NSMutableData *data;
+@property NSDictionary *responseDict;
+@property UIImage *img;
+
+@property (strong ,nonatomic) NSMutableArray *tableItems;
+@property (nonatomic, strong) NSMutableData *resultData;
+@property (strong, nonatomic) NSMutableDictionary *cachedImages;
 
 @end

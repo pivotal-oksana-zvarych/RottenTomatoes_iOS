@@ -12,6 +12,7 @@
 
 int main(int argc, char * argv[])
 {
+    NSLog(@"First Line");
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([BDDAppDelegate class]));
     }
